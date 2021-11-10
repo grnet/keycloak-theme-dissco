@@ -51,4 +51,10 @@ into the ```<providers>``` list
     into the ```<theme>``` block
 
 
+## License
+
+* [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+
+
+
 
