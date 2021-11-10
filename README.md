@@ -5,14 +5,20 @@ This is a custom theme for the DISSCO keycloak installations
 ## Building instructions:
 
 This project does not contain the actual code, just the project-specific configuration/overrides
-Building is handled by the github action "releases". A build is triggered whenever a tag is added. 
+
+Building is handled by the github action "releases". 
+
+A build is triggered whenever a tag is added. 
+
 Please find all built releases in the project's github [releases page](https://github.com/grnet/keycloak-theme-dissco/releases) 
 
 ## How to install the theme into Keycloak:
 
 Create the following folders:
+```
 $KEYCLOAK_BASE/modules/system/layers/keycloak/org/keycloak/keycloak-theme-vanilla
 $KEYCLOAK_BASE/modules/system/layers/keycloak/org/keycloak/keycloak-theme-vanilla/main
+```
 
 and add into the folder "main" 
 * the built jar keycloak-theme-vanilla/target/keycloak-theme-vanilla.jar
