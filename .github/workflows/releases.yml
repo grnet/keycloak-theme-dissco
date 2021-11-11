@@ -21,7 +21,7 @@ jobs:
       #checkout vanilla theme from master
       - uses: actions/checkout@v2
         with:
-          name: rciam/keycloak-theme-vanilla
+          repository: rciam/keycloak-theme-vanilla
           ref: "master"
           path: theme
 
