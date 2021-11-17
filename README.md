@@ -50,6 +50,13 @@ into the ```<providers>``` list
     ```
     into the ```<theme>``` block
 
+## Compatibility matrix
+
+|  DISSCO Theme version | Vanilla theme version |
+|---|---|
+|  v1.0.0 | v1.0.0, v1.1.0 |
+|  v1.1.0 | v1.2.0 |
+
 
 ## License
 
