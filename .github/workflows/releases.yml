@@ -30,11 +30,24 @@ jobs:
         with:
           path: override
 
+      #perform all the overrides and file copying
+
       - name: Override (copy) configuration
         run: cp override/configuration.json theme/src/main/resources/configuration.json
 
       - name: Override (copy) additional resources
-        run: cp -r override/additional theme/src/main/resources/theme/eosc-kc/login/resources/
+        run: cp -r override/additional theme/src/main/resources/theme/rciam/login/resources/
+
+      - name: Add additional messages (additional translations or overrides)
+        run: cp override/messages/* theme/src/main/resources/theme/rciam/login/messages/
+
+      #now do all the renaming stuff (from 'rciam' to 'dissco')
+
+      - name: Override keycloak-themes.json, change the name
+        run: sed -i 's/\"rciam\"/\"dissco\"/g' theme/src/main/resources/META-INF/keycloak-themes.json
+
+      - name: Rename folder to new name (required)
+        run: mv theme/src/main/resources/theme/rciam theme/src/main/resources/theme/dissco
 
       - name: Build with Maven
         run: cd theme && mvn --batch-mode --update-snapshots verify
